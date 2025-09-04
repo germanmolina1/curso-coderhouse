@@ -1,0 +1,151 @@
+@import 'redes';
+$primary-color: rgb(5, 49, 194);
+
+footer{
+    background-color: $primary-color;
+    padding: 1em 0;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    color: whitesmoke;
+    font-size: 14px;
+    p{
+        float:left;
+        bottom: 0;
+    }
+}
+
+header{
+    background-color: $primary-color;
+    nav ul{
+        float: right;
+        margin-right: 5%;
+        li{
+            display: inline-block;
+            line-height: 80px;
+            margin-left: 10px;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.Talleres{
+    width: 75px;
+    height: 75px;
+}
+
+main h1 {
+    margin-top: 1%;
+    text-align: center;
+    margin-left: -1%;
+}
+body{
+    background-color: rgba(243, 243, 243, 0.852);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    a{
+        color: black;
+    }
+}
+header{
+    a:hover{   
+        color: red
+    }
+}
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 2px solid rgb(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgb(0,0,0,0.5);
+    background-color: rgb(33, 22, 183);
+    color: white;
+}
+button:hover{
+    background-color: $primary-color;
+}
+header .logo{
+    font-size: 1.5;
+    color: whitesmoke;
+}
+#cuerpo{
+    color:white;
+    background-image:
+    linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("/assets/img/equipo.jpg");
+        text-align: center;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 150vh
+    }
+    .fa-square-facebook{
+        color: rgb(171, 1, 1);
+        font-size: 30px;
+        background-color:$primary-color;
+    }
+    .fa-instagram{
+        color: rgb(171, 1, 1);
+        font-size: 30px;
+        background-color: $primary-color;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    h1{font-size: 3.5em;}
+    h2{font-size: 2.5em;}
+    h3{font-size: 2em;}
+    p{font-size: 1.25em;}
+
+    .grilla{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 280px, 1fr ));
+    width: 100%;
+   max-width: 1100px;
+   height: 100%;
+    background-color: rgb(171, 1, 1);
+    margin: 5px auto;
+    padding: 7px;
+    position: relative;
+    gap: 20px;
+    .cesped{
+        width:100%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    .cantina{
+        border-radius: 15px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .equ{
+        border-radius: 15px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.videito{
+    border-radius: 15px;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}

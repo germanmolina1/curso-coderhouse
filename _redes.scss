@@ -1,0 +1,54 @@
+
+main {
+    h2 {
+        text-align: center;
+    }
+}
+div {
+    .quilombo {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax( 280px, 1fr ));
+        width: 100%;
+        max-width: 1100px;
+        height: 100%;
+        background-color: rgb(171, 1, 1);
+        margin: 40px auto;
+        padding: 7px;
+        position: relative;
+        gap: 20px;
+        
+    }
+}
+.grilla{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 280px, 1fr ));
+    width: 100%;
+   max-width: 1100px;
+   height: 100%;
+    background-color: rgb(171, 1, 1);
+    margin: 5px auto;
+    padding: 7px;
+    position: relative;
+    gap: 20px;
+    .cesped{
+        width:100%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    .cantina{
+        border-radius: 15px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .equ{
+        border-radius: 15px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.videito{
+    border-radius: 15px;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}

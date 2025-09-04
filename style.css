@@ -105,10 +105,6 @@ header .logo {
   background-color: rgb(5, 49, 194);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 h1 {
   font-size: 3.5em;
 }
@@ -142,7 +138,7 @@ main h2 {
   gap: 20px;
 }
 
-main .grilla {
+.grilla {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   width: 100%;
@@ -155,29 +151,135 @@ main .grilla {
   gap: 20px;
 }
 
-main .cesped {
-  width: 100%;
-  border-radius: 15px;
-  object-fit: cover;
-}
-
-main .videito {
+.videito {
   border-radius: 15px;
   width: 100%;
   object-fit: cover;
   height: 100%;
 }
 
-main .cantina {
+.cesped {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.cantina {
   border-radius: 15px;
   width: 100%;
   object-fit: cover;
 }
 
-main .equ {
+.equ {
   border-radius: 15px;
   width: 100%;
   object-fit: cover;
+}
+
+.ubicacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cancha {
+  width: auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapa {
+  min-height: 100vh;
+  margin-right: 5px;
+  border-radius: 20px;
+}
+
+.hora {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta1, .carta3, .carta2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/equ.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  min-height: 100vh;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.nos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(171, 1, 1);
+  color: antiquewhite;
+}
+
+.formu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.formu2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vdsdm {
+  height: 500px;
+}
+
+@media (max-width: 600px) {
+  .hora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li {
+    display: flex;
+    flex-direction: row;
+  }
+  .mapa {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .cancha {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

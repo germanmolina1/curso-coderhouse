@@ -1,0 +1,13 @@
+@mixin flex-center-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center; // A menudo útil con columnas centradas
+}
+
+@mixin background-overlay($image-url) {
+  background-image: linear-gradient(0deg, $gradient-overlay, $gradient-overlay), url($image-url);
+  background-position: center;
+  background-size: cover;
+}

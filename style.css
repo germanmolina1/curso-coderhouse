@@ -1,62 +1,104 @@
-footer {
-  background-color: rgb(5, 49, 194);
-  padding: 1em 0;
-  text-align: center;
-  margin-top: auto;
-  bottom: 0;
-  width: 100%;
-  color: whitesmoke;
-  font-size: 14px;
-}
-footer p {
-  float: left;
-  bottom: 0;
+/* Base Styles */
+body {
+  background-color: rgba(243, 243, 243, 0.852);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+.container {
+  max-width: 1200px; /* Ancho máximo para el contenido */
+  margin: 0 auto; /* Centrar el contenido */
+  padding: 0 15px; /* Espaciado lateral para evitar que el contenido toque los bordes */
+}
+
+/* Header */
 header {
   background-color: rgb(5, 49, 194);
+  padding: 10px 0;
 }
-header nav ul {
-  float: right;
-  margin-right: 5%;
-}
-header nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin-left: 10px;
-}
-header nav ul li a {
-  text-decoration: none;
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .Talleres {
   width: 75px;
   height: 75px;
+  flex-shrink: 0; /* Evita que la imagen se achique más de lo necesario */
 }
 
-main h1 {
-  margin-top: 1%;
-  text-align: center;
-  margin-left: -1%;
-}
-
-body {
-  background-color: rgba(243, 243, 243, 0.852);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+.logo {
+  font-size: 1.5em;
+  color: whitesmoke;
   margin: 0;
-  position: relative;
-  min-height: 100vh;
-  padding: 0%;
-  display: flex;
-  flex-direction: column;
+  order: 3; /* Para que aparezca después de la navegación en móviles si se envuelve */
 }
 
-header a {
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Permite que la navegación ocupe el espacio disponible */
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los ítems del menú se envuelvan */
+  justify-content: flex-end; /* Alinea los ítems a la derecha */
+  flex-grow: 1;
+}
+
+.nav-list li {
+  margin-left: 15px;
+}
+
+.nav-list li a {
+  text-decoration: none;
   color: black;
+  padding: 5px 0;
+  display: block;
 }
 
 header a:hover {
   color: red;
+}
+
+/* Main Section - Cuerpo */
+main {
+  flex-grow: 1; /* Permite que el main ocupe el espacio restante */
+}
+
+main h1 {
+  margin-top: 2%;
+  text-align: center;
+  font-size: 3.5em; /* Usamos em para que se adapte mejor */
+}
+
+#cuerpo {
+  color: white;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/equipo.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 80vh; /* Usamos vh para una altura responsiva */
+  padding: 20px; /* Agregamos padding para evitar que el texto toque los bordes */
+}
+
+#cuerpo h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 button {
@@ -68,43 +110,53 @@ button {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   background-color: rgb(33, 22, 183);
   color: white;
+  cursor: pointer;
 }
 
 button:hover {
   background-color: rgb(5, 49, 194);
 }
 
-header .logo {
-  font-size: 1.5;
-  color: whitesmoke;
-}
-
-#cuerpo {
-  color: white;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/equipo.jpg");
-  text-align: center;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  height: 150vh;
-}
-
-.fa-square-facebook {
-  color: rgb(171, 1, 1);
-  font-size: 30px;
+/* Footer */
+footer {
   background-color: rgb(5, 49, 194);
+  padding: 15px 0;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 14px;
 }
 
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.social-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.social-nav li {
+  margin-left: 15px;
+}
+
+.fa-square-facebook,
 .fa-instagram {
   color: rgb(171, 1, 1);
   font-size: 30px;
-  background-color: rgb(5, 49, 194);
+  background-color: transparent; /* Quité el background-color aquí, ya que el footer ya lo tiene */
 }
 
+/* General Typography */
 h1 {
   font-size: 3.5em;
 }
@@ -121,69 +173,42 @@ p {
   font-size: 1.25em;
 }
 
-main h2 {
-  text-align: center;
-}
-
-.quilombo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  width: 100%;
-  max-width: 1100px;
-  height: 100%;
-  background-color: rgb(171, 1, 1);
-  margin: 40px auto;
-  padding: 7px;
-  position: relative;
-  gap: 20px;
-}
-
+/* Specific Page Styles (quilombo, grilla, ubicacion, etc.) */
+.quilombo,
 .grilla {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   width: 100%;
   max-width: 1100px;
-  height: 100%;
   background-color: rgb(171, 1, 1);
-  margin: 5px auto;
-  padding: 7px;
-  position: relative;
+  margin: 40px auto;
+  padding: 15px; /* Aumentado padding */
   gap: 20px;
+  box-sizing: border-box; /* Asegura que padding no aumente el ancho total */
 }
 
-.videito {
-  border-radius: 15px;
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-}
-
-.cesped {
-  width: 100%;
-  border-radius: 15px;
-  object-fit: cover;
-}
-
-.cantina {
-  border-radius: 15px;
-  width: 100%;
-  object-fit: cover;
-}
-
+.videito,
+.cesped,
+.cantina,
 .equ {
-  border-radius: 15px;
   width: 100%;
+  height: auto; /* Altura automática para mantener la proporción */
+  border-radius: 15px;
   object-fit: cover;
+  display: block; /* Elimina espacio extra debajo de las imágenes */
 }
 
 .ubicacion {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
   justify-content: space-around;
+  gap: 20px;
+  padding: 20px 0;
 }
 
 .cancha {
-  width: auto;
+  width: 100%; /* Ocupa todo el ancho en móviles */
+  max-width: 600px; /* Ancho máximo para la imagen */
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -191,29 +216,38 @@ main h2 {
 }
 
 .mapa {
-  min-height: 100vh;
-  margin-right: 5px;
+  width: 100%; /* Ocupa todo el ancho en móviles */
+  max-width: 600px; /* Ancho máximo para el mapa */
+  height: 400px; /* Altura fija para el mapa */
   border-radius: 20px;
 }
 
 .hora {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
 }
 
-.carta1, .carta3, .carta2 {
+.carta1,
+.carta3,
+.carta2 {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/equ.jpg);
   background-size: cover;
   background-position: center;
-  height: 100%;
-  min-height: 100vh;
+  height: auto; /* Altura automática */
+  min-height: 400px; /* Mínima altura */
   border-radius: 20px;
   color: rgb(255, 255, 255);
+  padding: 20px;
 }
 
 .nos {
@@ -223,13 +257,17 @@ main h2 {
   width: 100%;
   background-color: rgb(171, 1, 1);
   color: antiquewhite;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .formu {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .formu2 {
@@ -237,49 +275,117 @@ main h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 500px; /* Ancho máximo para el formulario */
+  margin: 0 auto;
 }
 
 .vdsdm {
-  height: 500px;
+  height: 500px; /* Altura fija, considera si debería ser responsiva con vh */
+  width: 100%;
 }
 
-@media (max-width: 600px) {
+
+/* Media Queries */
+
+/* Tablet y dispositivos medianos */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .nav-list {
+    justify-content: center;
+  }
+
+  .nav-list li {
+    margin: 0 10px;
+  }
+
+  .logo {
+    order: 0; /* Mueve el logo arriba en pantallas pequeñas */
+    margin-top: 10px;
+  }
+
+  main h1 {
+    font-size: 2.5em;
+  }
+
+  #cuerpo h2 {
+    font-size: 1.8em;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  footer p {
+    margin-bottom: 10px;
+  }
+
+  .social-nav ul {
+    justify-content: center;
+  }
+
+  .ubicacion,
   .hora {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  footer {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-  }
-  nav ul li {
-    display: flex;
-    flex-direction: row;
-  }
-  .mapa {
-    display: flex;
-    flex-direction: column;
-    height: 10%;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-  .cancha {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
+
+  .mapa, .cancha {
+    width: 95%; /* Un poco de margen en los lados */
+    height: 300px; /* Altura ajustada para pantallas más pequeñas */
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/* Dispositivos móviles pequeños */
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 2em;
+  }
+
+  #cuerpo h2 {
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 1.2em;
+    padding: 8px 15px;
+  }
+
+  .nav-list li {
+    margin: 0 5px;
+  }
+  
+  .nav-list li a {
+    font-size: 0.9em;
+  }
+
+  .Talleres {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 1.2em;
+  }
+
+  .quilombo,
+  .grilla {
+    margin: 20px auto;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .fa-square-facebook,
+  .fa-instagram {
+    font-size: 25px;
+  }
+}

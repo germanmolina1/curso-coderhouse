@@ -1,0 +1,116 @@
+// Media Queries
+@media (max-width: $tablet-breakpoint) {
+  header {
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-nav {
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+
+      .nav-list {
+        justify-content: center;
+
+        li {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .logo {
+      order: 0;
+      margin-top: 10px;
+    }
+  }
+
+  main {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+
+  #cuerpo {
+    h2 {
+      font-size: 1.8em;
+    }
+  }
+
+  footer {
+    .footer-content {
+      flex-direction: column;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .social-nav ul {
+      justify-content: center;
+    }
+  }
+
+  .ubicacion,
+  .hora {
+    flex-direction: column;
+  }
+
+  .mapa,
+  .cancha {
+    width: 95%;
+    height: 300px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  main {
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  #cuerpo {
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+
+  button {
+    font-size: 1.2em;
+    padding: 8px 15px;
+  }
+
+  header {
+    .main-nav .nav-list {
+      li {
+        margin: 0 5px;
+        a {
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    .Talleres {
+      width: 60px;
+      height: 60px;
+    }
+
+    .logo {
+      font-size: 1.2em;
+    }
+  }
+
+  .quilombo,
+  .grilla {
+    margin: 20px auto;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .fa-square-facebook,
+  .fa-instagram {
+    font-size: 25px;
+  }
+}
